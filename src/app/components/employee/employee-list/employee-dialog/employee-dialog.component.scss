@@ -1,0 +1,9 @@
+@import "@core/scss/angular/libs/flatpickr.component.scss";
+@import "@core/scss/angular/libs/select.component.scss";
+@import "@core/scss/base/pages/app-user.scss";
+
+.cdk-overlay-container,
+.cdk-global-overlay-wrapper,
+.cdk-overlay-connected-position-bounding-box {
+  z-index: 9000;
+}

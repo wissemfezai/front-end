@@ -1,0 +1,93 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="myModalLabel1">{{ employee.id ? 'Modifier le' : 'Ajouter un'}} employee</h4>
+  <button type="button" class="close" (click)="close(null)" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body" tabindex="0" ngbAutofocus>
+  <form [formGroup]="form" class="form-validate">
+
+    <div class="row">
+
+      <div class="col-md-2">
+        <div class="form-group">
+          <label for="civility">Civilité</label>
+          <select class="form-control" formControlName="civility" name="civility" id="civility" required>
+            <option value="SIR">Monsieur</option>
+            <option value="MRS">Madame</option>
+            <option value="MISS">Mademoiselle</option>
+          </select>
+          <div *ngIf="f.civility.errors?.required " class="text text-danger">
+            La civility est obligatoire
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="form-group">
+          <label for="firstName">Prénom</label>
+          <input type="text" class="form-control" placeholder="Prénom" name="firstName" id="firstName"
+            formControlName="firstName" required />
+          <div *ngIf="f.firstName.errors?.required " class="text text-danger">
+            Le prénom est obligatoire
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="form-group">
+          <label for="lastName">Nom</label>
+          <input type="text" class="form-control" placeholder="Nom" oninput="this.value=this.value.toUpperCase()"
+            name="lastName" id="lastName" formControlName="lastName" required />
+          <div *ngIf="f.lastName.errors?.required " class="text text-danger">
+            Le nom est obligatoire
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="text" class="form-control" placeholder="email" name="email" id="email" formControlName="email"
+            required />
+          <div *ngIf="f.email.errors?.required " class="text text-danger">
+            L'email est obligatoire
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="phone">Mobile</label>
+          <ngx-mat-intl-tel-input class="form-control" [preferredCountries]="['fr','tn', 'es', 'gb']"
+            [enablePlaceholder]="true" [enableSearch]="true" name="phone" formControlName="phone" #phone
+            placeholder="Enter Number" required></ngx-mat-intl-tel-input>
+          <div *ngIf="f.phone.errors?.required " class="text text-danger">
+            Le mobile est obligatoire
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 d-flex flex-sm-row-reverse flex-column mt-2 text-right">
+
+      <button (click)="close(form.value)" [disabled]="!form.valid" class="btn btn-primary mb-1 mb-sm-0 mr-0 mr-sm-1"
+        rippleEffect>
+        Enregistrer
+      </button>
+
+      <button (click)="resetFormWithDefaultValues()" class="btn btn-warning mb-1 mb-sm-0 mr-0 mr-sm-1" rippleEffect>{{
+        'COMMON.RESET' | translate }}</button>
+
+      <button class="btn btn-danger mb-1 mb-sm-0 mr-0 mr-sm-1" (click)="close(null)" rippleEffect>Annuler</button>
+
+    </div>
+
+
+  </form>
+
+</div>

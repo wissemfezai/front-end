@@ -1,0 +1,44 @@
+﻿<div class="page-wrapper">
+	<div class="auth-bg">
+		<div class="authentication-box">
+			<div class="text-center"><img src="assets/images/endless-logo.png" alt=""></div>
+			<div class="card mt-4">
+				<div class="card-body">
+					<div class="text-center">
+						<h4>LOGIN</h4>
+						<h6>Enter your Username and Password </h6>
+					</div>
+					<form class="theme-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+						<div class="form-group">
+							<label class="col-form-label pt-0">Username</label>
+							<input class="form-control" formControlName="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+             <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">Username is required</div>
+              </div>
+						</div>
+						<div class="form-group">
+							<label class="col-form-label">Password</label>
+							<input class="form-control" type="password" formControlName="password" class="form-control" 
+              [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+              </div>
+						</div>
+						<div class="checkbox p-0">
+							<input id="checkbox1" type="checkbox">
+							<label for="checkbox1">Remember me</label>
+						</div>
+						<div class="form-group form-row mt-3 mb-0">
+              <button [disabled]="loading" class="btn btn-primary btn-block btn-lg">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Login
+              </button>
+						
+						</div>
+            <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

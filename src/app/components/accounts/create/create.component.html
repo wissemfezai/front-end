@@ -1,0 +1,543 @@
+<!-- Container-fluid starts -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            
+            <div class="card">
+                <div class="card-header">
+                    <h5>create new account</h5>
+                </div>
+                <form class="form theme-form" [formGroup]="createForm" (ngSubmit)="onSubmit()" >
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">username</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" formControlName="username"
+                                            placeholder="username">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">web password</label>
+                                    <div class="col-sm-9">
+                                        <input type="password" class="form-control" placeholder="Password input" formControlName="web_password"> 
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">authname</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" formControlName="authname"
+                                            placeholder="authname">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">voip password</label>
+                                    <div class="col-sm-9">
+                                        <input type="password" class="form-control" placeholder="voip password input" formControlName="voip_password">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">id tariff</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="i_tariff"
+                                            placeholder="id tariff">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">id time zone</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="i_time_zone"
+                                            placeholder="id time zone">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">id lang</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="id lang" formControlName="i_lang">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">balance</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="balance" formControlName="balance">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">credit limit</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="credit limit" formControlName="credit_limit">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">blocked</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="blocked"
+                                            placeholder="blocked">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">max sessions</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="max_sessions"
+                                            placeholder="max sessions">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">max credit time</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="max_credit_time"
+                                            placeholder="max credit time">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">translation rule</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="translation rule" formControlName="translation_rule">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">cli translation rule</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="cli translation rule" formControlName="cli_translation_rule">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">cpe number</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="cpe number" formControlName="cpe_number">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">id export type</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="i_export_type"
+                                            placeholder="id export type">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">reg allowed</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="reg_allowed"
+                                            placeholder="reg allowed">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">trust cli</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="trust_cli"
+                                            placeholder="trust cli">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">disallow loops</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="disallow_loops"
+                                            placeholder="disallow loops">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">vm enabled</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="vm_enabled"
+                                            placeholder="vm enabled">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">vm password</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="vm password" formControlName="vm_password">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">vm notify emails</label>
+                                    <div class="col-sm-9">
+                                        <input type="email" class="form-control digits" placeholder="vm notify emails" formControlName="vm_notify_emails">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">vm forward emails</label>
+                                    <div class="col-sm-9">
+                                        <input type="email" class="form-control digits" placeholder="vm forward emails" formControlName="vm_forward_emails">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">vm del after fwd</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="vm_del_after_fwd"
+                                            placeholder="vm del after fwd">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">company name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="company name" formControlName="company_name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">salutation</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="salutation" formControlName="salutation">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">first name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="first name" formControlName="first_name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">mid init</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="mid init" formControlName="mid_init">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">last name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="last name" formControlName="last_name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">street address</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="street address" formControlName="street_addr">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">state</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="state" formControlName="state">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">postal code</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="postal code" formControlName="postal_code">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">city</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="city" formControlName="city">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">country</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="country" formControlName="country">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">contact</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="contact" formControlName="contact">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Telephone</label>
+                                    <div class="col-sm-9">
+                                        <input class="form-control m-input digits" type="tel" value="" placeholder="phone" formControlName="phone">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">fax</label>
+                                    <div class="col-sm-9">
+                                        <input class="form-control m-input digits" type="tel" value="" placeholder="fax" formControlName="fax">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">alt phone</label>
+                                    <div class="col-sm-9">
+                                        <input class="form-control m-input digits" type="tel" value="" placeholder="alt phone" formControlName="alt_phone">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">alt contact</label>
+                                    <div class="col-sm-9">
+                                        <input class="form-control m-input digits" type="tel" value="" placeholder="alt contact" formControlName="alt_contact">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">email</label>
+                                    <div class="col-sm-9">
+                                        <input type="email" class="form-control digits" placeholder="email" formControlName="email">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">cc</label>
+                                    <div class="col-sm-9">
+                                        <input type="email" class="form-control digits" placeholder="cc" formControlName="cc"> 
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">bcc</label>
+                                    <div class="col-sm-9">
+                                        <input type="email" class="form-control digits" placeholder="bcc" formControlName="bcc">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">payment currency</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="payment currency" formControlName="payment_currency">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">payment method</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="payment_method"
+                                            placeholder="payment method">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">on payment action</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="on_payment_action"
+                                            placeholder="on payment action">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">min payment amount</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="min_payment_amount"
+                                            placeholder="min payment amount">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">lifetime</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="lifetime"
+                                            placeholder="lifetime">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">preferred codec</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="preferred_codec"
+                                            placeholder="preferred codec">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">use preferred codec only</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="use_preferred_codec_only"
+                                            placeholder="use preferred codec only">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">welcome call ivr</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="welcome_call_ivr"
+                                            placeholder="welcome call ivr">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">id billing plan</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="i_billing_plan"
+                                            placeholder="id billing plan">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">id media relay type</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="i_media_relay_type"
+                                            placeholder="id media relay type">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">id password policy</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="i_password_policy"
+                                            placeholder="id password policy">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">id routing group</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="i_routing_group"
+                                            placeholder="id routing group">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">id account class</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" formControlName="i_account_class"
+                                            placeholder="id account class">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">vm timeout</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="vm timeout" formControlName="vm_timeout">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">vm check number</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="vm check number" formControlName="vm_check_number">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">id commission agent</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="id commission agent" formControlName="i_commission_agent">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">commission size</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="commission size" formControlName="commission_size">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">lan access</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="lan access" formControlName="lan_access">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">batchTag</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="batchTag" formControlName="batchTag">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">id provisioning</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="id provisioning" formControlName="i_provisioning">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">invoicing enabled</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="invoicing enabled" formControlName="invoicing_enabled">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">id invoice template</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="id invoice template" formControlName="i_invoice_template">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">id caller name type</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="id caller name type" formControlName="i_caller_name_type">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">caller name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="caller name" formControlName="caller_name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">followme enabled</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="followme enabled" formControlName="followme_enabled">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">vm dialin access</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="vm dialin access" formControlName="vm_dialin_access">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">hide own cli</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="hide own cli" formControlName="hide_own_cli">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">block incoming anonymous</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="block incoming anonymous" formControlName="block_incoming_anonymous">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">dnd enabled</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="dnd enabled" formControlName="dnd_enabled">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">description</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="description" formControlName="description">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">p assrt id translation rule</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="p assrt id translation rule" formControlName="p_assrt_id_translation_rule">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">pass p asserted id</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="pass p asserted id" formControlName="pass_p_asserted_id"> 
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">dncl lookup</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="dncl lookup" formControlName="dncl_lookup">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">dgenerate ringbacktone</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="generate ringbacktone" formControlName="generate_ringbacktone">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">max calls per second</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="max calls per second" formControlName="max_calls_per_second">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">allow free onnet calls</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="allow free onnet calls" formControlName="allow_free_onnet_calls">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">start page</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="start page" formControlName="start_page">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">trust privacy hdrs</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control digits" placeholder="trust privacy hdrs" formControlName="trust_privacy_hdrs">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="col-sm-9 offset-sm-3">
+                            <button type="submit" class="btn btn-primary mr-1">Submit</button>
+                            <input type="reset" class="btn btn-light" value="Cancel">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+<!-- Container-fluid Ends -->
